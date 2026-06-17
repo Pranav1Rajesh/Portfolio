@@ -39,7 +39,7 @@ const Education = () => {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)' }}>
                     <Calendar size={14} /> 2023 – Present
                   </div>
-                  <div style={{ fontWeight: 700, color: 'var(--primary)' }}>CGPA: 9.36 (5th semester)</div>
+                  <div style={{ fontWeight: 700, color: 'var(--primary)' }}>CGPA: 9.48 (6th semester)</div>
                 </div>
               </div>
             </div>

@@ -115,7 +115,7 @@ ul {
 
 /* Mobile Responsiveness Padding */
 .section-padding {
-  padding: 120px 5vw 100px 5vw;
+  padding: 45px 5vw;
 }
 
 @media (max-width: 768px) {

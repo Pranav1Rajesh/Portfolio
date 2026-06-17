@@ -23,7 +23,7 @@ const About = () => {
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem', marginTop: '3rem' }}>
                 <div className="glass" style={{ padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '2rem' }}>9.36</h3>
+                  <h3 style={{ fontSize: '2rem' }}>9.48</h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>CURRENT CGPA</p>
                 </div>
                 <div className="glass" style={{ padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
@@ -48,11 +48,11 @@ const About = () => {
                 </li>
                 <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.5rem' }}>
                   <span style={{ color: 'var(--text-muted)' }}>Focus</span>
-                  <span>AI / Web</span>
+                  <span>AI/ML</span>
                 </li>
               </ul>
               
-              <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+              <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>"Engineering intelligence into reality"</p>
                  <div style={{ height: '2px', width: '100%', background: 'rgba(255,255,255,0.05)', borderRadius: '1px' }}>
                     <motion.div 
