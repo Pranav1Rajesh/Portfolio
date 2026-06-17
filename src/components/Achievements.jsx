@@ -5,19 +5,19 @@ import { Award, Trophy, Star } from 'lucide-react';
 const Achievements = () => {
   const stats = [
     {
-      label: 'Hackathon Semi Finalist',
-      subtitle: 'Smart India Hackathon',
+      label: 'Web Development Intern',
+      subtitle: 'Indiatourism',
       icon: <Trophy size={24} color="#f59e0b" />
-    },
-    {
-      label: 'Best Paper Award',
-      subtitle: 'MediSentry Research',
-      icon: <Award size={24} color="#3b82f6" />
     },
     {
       label: 'AI Internship',
       subtitle: 'IITM Pravartak',
       icon: <Star size={24} color="#a855f7" />
+    },
+    {
+      label: 'Best Paper Award',
+      subtitle: 'MediSentry Research',
+      icon: <Award size={24} color="#3b82f6" />
     }
   ];
 
