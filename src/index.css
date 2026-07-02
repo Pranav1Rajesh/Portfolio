@@ -140,9 +140,10 @@ ul {
     grid-template-columns: 1fr !important;
   }
 
-  /* Make header fonts slightly smaller on very small devices if needed */
+  /* Make header fonts slightly smaller on very small devices if needed, without breaking clamp */
   h3 {
-    font-size: 2rem !important;
+    font-size: max(1.75rem, min(2rem, 6vw));
   }
 }
+
 

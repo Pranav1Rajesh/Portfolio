@@ -23,11 +23,11 @@ const About = () => {
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem', marginTop: '3rem' }}>
                 <div className="glass" style={{ padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '2rem' }}>9.48</h3>
+                  <h3 style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)', wordBreak: 'break-word' }}>9.48</h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>CURRENT CGPA</p>
                 </div>
                 <div className="glass" style={{ padding: '20px', borderRadius: '16px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '2rem' }}>Chennai</h3>
+                  <h3 style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)', wordBreak: 'break-word' }}>Chennai</h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>LOCATION</p>
                 </div>
               </div>

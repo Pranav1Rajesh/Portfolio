@@ -107,8 +107,17 @@ const Navbar = () => {
         }
         @media (max-width: 768px) {
           .nav-item {
-            padding: 8px 12px !important;
-            font-size: 0.7rem !important;
+            padding: 6px 10px !important;
+            font-size: 0.65rem !important;
+          }
+          nav {
+            max-width: 95vw;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          nav::-webkit-scrollbar {
+            display: none;
           }
         }
       `}</style>
