@@ -46,6 +46,7 @@ const Achievements = () => {
 
         {/* Achievement Cards */}
         <div
+          className="achievements-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',

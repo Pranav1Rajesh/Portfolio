@@ -49,6 +49,7 @@ const Skills = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
+          className="skills-grid"
           style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}
         >
           {skillGroups.map((group, idx) => (

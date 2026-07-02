@@ -122,4 +122,27 @@ ul {
   .section-padding {
     padding: 60px 5vw;
   }
+  
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Make header fonts slightly smaller on very small devices if needed */
+  h3 {
+    font-size: 2rem !important;
+  }
 }
+

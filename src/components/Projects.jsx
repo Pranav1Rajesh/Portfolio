@@ -46,7 +46,7 @@ const Projects = () => {
           <h3 style={{ fontSize: '2.5rem' }}>Featured <span className="text-gradient">Projects</span></h3>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns:  'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '2.5rem' }}>
+        <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns:  'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '2.5rem' }}>
           {projects.map((project, index) => (
             <motion.div
               key={index}
