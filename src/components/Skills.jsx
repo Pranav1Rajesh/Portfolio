@@ -7,12 +7,12 @@ const Skills = () => {
     {
       title: 'Languages',
       icon: <Code2 className="text-gradient" />,
-      skills: ['Python', 'Java', 'C/C++', 'JavaScript'],
+      skills: ['Python', 'Java', 'C/C++'],
     },
     {
       title: 'Technologies',
       icon: <Layers className="text-gradient" />,
-      skills: ['React.js', 'Node.js', 'MongoDB', 'MySQL', 'Django', 'PostgreSQL'],
+      skills: ['React.js', 'Node.js', 'MongoDB', 'MySQL'],
     },
     {
       title: 'Domains',
