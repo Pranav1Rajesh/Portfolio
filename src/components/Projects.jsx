@@ -33,7 +33,7 @@ const projects = [
     tech: ['React.js', '3D Engine', 'Game Dev'],
     github: 'https://github.com/Pranav1Rajesh/Basic-Shooting-Game',
     // ⬇️ GIVE YOUR DEPLOYED ZOMBIE WARFARE 3D LINK HERE:
-    live: 'https://your-zombie-warfare-link.com',
+    live: 'https://basic-shooting-game.vercel.app/',
   },
 ];
 
