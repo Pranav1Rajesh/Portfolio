@@ -84,7 +84,7 @@ const About = () => {
                 ].map(({ label, value }) => (
                   <li
                     key={label}
-                    style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.5rem' }}
+                    style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--glass-border)', paddingBottom: '0.5rem' }}
                   >
                     <span style={{ color: 'var(--text-muted)' }}>{label}</span>
                     <span style={{ fontWeight: 600 }}>{value}</span>
@@ -93,7 +93,7 @@ const About = () => {
               </ul>
 
               <div style={{ marginTop: '1.5rem' }}>
-                <div style={{ height: '2px', width: '100%', background: 'rgba(255,255,255,0.05)', borderRadius: '1px' }}>
+                <div style={{ height: '2px', width: '100%', background: 'var(--glass-border)', borderRadius: '1px' }}>
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: '100%' }}

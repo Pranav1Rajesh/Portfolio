@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
@@ -23,6 +23,8 @@ const projects = [
     image: '/projects/aqi.png',
     tech: ['IoT', 'Analytics', 'React', 'Live Data'],
     github: 'https://github.com/Pranav1Rajesh/AQI-Monitor',
+    // ⬇️ GIVE YOUR DEPLOYED AQI MONITOR LINK HERE:
+    live: 'https://your-aqi-monitor-link.com',
   },
   {
     title: 'Zombie Warfare 3D',
@@ -30,6 +32,8 @@ const projects = [
     image: '/projects/zombie.png',
     tech: ['React.js', '3D Engine', 'Game Dev'],
     github: 'https://github.com/Pranav1Rajesh/Basic-Shooting-Game',
+    // ⬇️ GIVE YOUR DEPLOYED ZOMBIE WARFARE 3D LINK HERE:
+    live: 'https://your-zombie-warfare-link.com',
   },
 ];
 
@@ -42,7 +46,7 @@ const Projects = () => {
         }
         .project-card:hover {
           transform: translateY(-6px);
-          box-shadow: 0 20px 56px rgba(0,0,0,0.5), 0 0 32px rgba(59,130,246,0.1);
+          box-shadow: 0 20px 56px rgba(0,0,0,0.4), 0 0 32px var(--primary-glow);
         }
         .project-img {
           transition: transform 0.5s ease;
@@ -54,22 +58,45 @@ const Projects = () => {
           display: inline-flex;
           align-items: center;
           gap: 0.5rem;
-          padding: 10px 22px;
+          padding: 9px 18px;
           border-radius: 10px;
-          font-size: 0.88rem;
+          font-size: 0.85rem;
           font-weight: 600;
-          background: rgba(59,130,246,0.12);
-          border: 1px solid rgba(59,130,246,0.3);
+          background: var(--chip-bg, rgba(59,130,246,0.12));
+          border: 1px solid var(--glass-border);
           color: var(--primary);
-          transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+          transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
           cursor: pointer;
           text-decoration: none;
         }
         .github-btn:hover {
-          background: rgba(59,130,246,0.22);
-          border-color: rgba(59,130,246,0.6);
-          color: #fff;
+          background: var(--primary);
+          border-color: var(--primary);
+          color: #ffffff;
           transform: translateY(-2px);
+          box-shadow: 0 4px 16px var(--primary-glow);
+        }
+        .live-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          padding: 9px 18px;
+          border-radius: 10px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          background: linear-gradient(135deg, var(--primary), var(--secondary));
+          color: #ffffff !important;
+          border: none;
+          box-shadow: 0 4px 14px var(--primary-glow);
+          transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.2s ease;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        .live-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px var(--primary-glow);
+          filter: brightness(1.1);
+          color: #ffffff !important;
         }
       `}</style>
 
@@ -93,7 +120,7 @@ const Projects = () => {
               transition={{ delay: index * 0.1 }}
               style={{ borderRadius: '24px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
             >
-              {/* Project image — no overlay buttons */}
+              {/* Project image */}
               <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
                 <img
                   src={project.image}
@@ -127,15 +154,29 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Single GitHub button */}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="github-btn"
-                >
-                  <Github size={16} /> View on GitHub
-                </a>
+                {/* Buttons: GitHub + optional Deployed Live Website button */}
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-btn"
+                  >
+                    <Github size={16} /> View on GitHub
+                  </a>
+
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="live-btn"
+                      title={`Visit ${project.title} deployed website`}
+                    >
+                      <ExternalLink size={15} /> Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

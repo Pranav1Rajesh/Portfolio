@@ -2,14 +2,22 @@ import React from 'react';
 
 const Background = () => {
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: -2, pointerEvents: 'none', background: 'var(--bg-dark)' }}>
+    <div style={{ 
+      position: 'fixed', 
+      inset: 0, 
+      zIndex: -2, 
+      pointerEvents: 'none', 
+      background: 'var(--bg-dark)', 
+      transition: 'background-color 0.4s ease' 
+    }}>
       {/* Grid Pattern */}
       <div style={{ 
         position: 'absolute', 
         inset: 0, 
-        backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0)',
+        backgroundImage: 'radial-gradient(circle at 2px 2px, var(--grid-dot) 1.5px, transparent 0)',
         backgroundSize: '40px 40px',
-        opacity: 0.5
+        opacity: 0.8,
+        transition: 'opacity 0.4s ease'
       }} />
       
       {/* Animated Gradient Gradients */}
@@ -19,12 +27,13 @@ const Background = () => {
         left: '-10%',
         width: '120%',
         height: '120%',
-        background: 'radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 40%)',
-        zIndex: -1
+        background: 'radial-gradient(circle at 10% 20%, var(--bg-grad-1) 0%, transparent 40%), radial-gradient(circle at 90% 80%, var(--bg-grad-2) 0%, transparent 40%)',
+        zIndex: -1,
+        transition: 'background 0.4s ease'
       }} />
       
       {/* Abstract Shapes */}
-      <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.1 }}>
+      <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.15 }}>
         <defs>
           <filter id="glow">
             <feGaussianBlur stdDeviation="5" result="coloredBlur"/>

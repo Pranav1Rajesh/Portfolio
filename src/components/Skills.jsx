@@ -37,7 +37,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="section-padding" style={{ background: 'rgba(2, 6, 23, 0.5)' }}>
+    <section id="skills" className="section-padding" style={{ background: 'var(--section-alt-bg)', transition: 'background-color 0.4s ease' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2 style={{ fontSize: 'medium', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '1rem' }}>Expertise</h2>
@@ -60,7 +60,7 @@ const Skills = () => {
               style={{ padding: '2rem', borderRadius: '24px', transition: 'all 0.3s ease' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                <div style={{ padding: '12px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)' }}>
+                <div style={{ padding: '12px', borderRadius: '12px', background: 'var(--chip-bg)' }}>
                   {group.icon}
                 </div>
                 <h4 style={{ fontSize: '1.25rem' }}>{group.title}</h4>
@@ -70,13 +70,14 @@ const Skills = () => {
                 {group.skills.map((skill) => (
                   <motion.div
                     key={skill}
-                    whileHover={{ scale: 1.1, backgroundColor: 'rgba(59, 130, 246, 0.15)', borderColor: 'var(--primary)' }}
+                    whileHover={{ scale: 1.08, backgroundColor: 'rgba(59, 130, 246, 0.15)', borderColor: 'var(--primary)' }}
                     style={{ 
                       padding: '8px 16px', 
                       borderRadius: '10px', 
                       fontSize: '0.9rem', 
-                      background: 'rgba(255,255,255,0.03)',
-                      border: '1px solid rgba(255,255,255,0.05)',
+                      background: 'var(--chip-bg)',
+                      border: '1px solid var(--chip-border)',
+                      color: 'var(--text-main)',
                       cursor: 'default'
                     }}
                   >

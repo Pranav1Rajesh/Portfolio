@@ -59,8 +59,8 @@ const Education = () => {
                 width: '60px', 
                 height: '60px', 
                 borderRadius: '15px', 
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid var(--glass-border)',
+                background: 'var(--chip-bg)',
+                border: '1px solid var(--chip-border)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -94,8 +94,8 @@ const Education = () => {
                 width: '60px', 
                 height: '60px', 
                 borderRadius: '15px', 
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid var(--glass-border)',
+                background: 'var(--chip-bg)',
+                border: '1px solid var(--chip-border)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'

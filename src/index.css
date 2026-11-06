@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap');
 
 :root {
+  --theme: dark;
   --bg-dark: #020617;
   --bg-card: rgba(15, 23, 42, 0.6);
   --primary: #3b82f6;
@@ -12,8 +13,63 @@
   --text-muted: #94a3b8;
   --glass-border: rgba(255, 255, 255, 0.1);
   --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --nav-bg: rgba(15, 23, 42, 0.6);
+  --nav-shadow: none;
+  --nav-shadow-scrolled: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
+  --nav-active-bg: rgba(255, 255, 255, 0.14);
+  --nav-active-border: rgba(255, 255, 255, 0.24);
+  --nav-active-text: #ffffff;
+  --toggle-track-bg: rgba(15, 23, 42, 0.6);
+  --toggle-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --section-alt-bg: rgba(2, 6, 23, 0.5);
+  --photo-rim-bg: rgba(15, 23, 42, 0.25);
+  --photo-inner-bg: #070b16;
+  --chip-bg: rgba(255, 255, 255, 0.05);
+  --chip-border: rgba(255, 255, 255, 0.1);
+  --grid-dot: rgba(255, 255, 255, 0.035);
+  --bg-grad-1: rgba(59, 130, 246, 0.06);
+  --bg-grad-2: rgba(168, 85, 247, 0.06);
+  --scrollbar-track: #020617;
+  --scrollbar-thumb: #1e293b;
+  --scrollbar-thumb-hover: #334155;
+  --cursor-glow: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
   --sora: 'Sora', sans-serif;
   --inter: 'Inter', sans-serif;
+}
+
+[data-theme="light"] {
+  --theme: light;
+  --bg-dark: #f6f8fc;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.25);
+  --secondary: #7c3aed;
+  --secondary-glow: rgba(124, 58, 237, 0.25);
+  --accent: #0284c7;
+  --text-main: #0f172a;
+  --text-muted: #526077;
+  --glass-border: rgba(148, 163, 184, 0.28);
+  --card-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 2px 8px -2px rgba(15, 23, 42, 0.04);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --nav-shadow-scrolled: 0 16px 36px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(15, 23, 42, 0.06);
+  --nav-active-bg: rgba(37, 99, 235, 0.12);
+  --nav-active-border: rgba(37, 99, 235, 0.35);
+  --nav-active-text: #1d4ed8;
+  --toggle-track-bg: rgba(255, 255, 255, 0.85);
+  --toggle-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --section-alt-bg: rgba(238, 242, 250, 0.65);
+  --photo-rim-bg: rgba(255, 255, 255, 0.8);
+  --photo-inner-bg: #e2e8f0;
+  --chip-bg: rgba(15, 23, 42, 0.05);
+  --chip-border: rgba(15, 23, 42, 0.1);
+  --grid-dot: rgba(15, 23, 42, 0.07);
+  --bg-grad-1: rgba(37, 99, 235, 0.08);
+  --bg-grad-2: rgba(124, 58, 237, 0.08);
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+  --cursor-glow: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
 }
 
 * {
@@ -33,6 +89,7 @@ body {
   font-family: var(--inter);
   overflow-x: hidden;
   line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1, h2, h3, h4 {
@@ -56,16 +113,16 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-dark);
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Glassmorphism Utility */
@@ -75,12 +132,17 @@ ul {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--card-shadow);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .glass-hover:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="light"] .glass-hover:hover {
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.15);
 }
 
 /* Gradients */
@@ -109,7 +171,7 @@ ul {
 .cursor-glow {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  background: var(--cursor-glow);
   position: fixed;
   pointer-events: none;
   z-index: 9999;
@@ -145,10 +207,7 @@ ul {
     grid-template-columns: 1fr !important;
   }
 
-  /* Make header fonts slightly smaller on very small devices if needed, without breaking clamp */
   h3 {
     font-size: max(1.75rem, min(2rem, 6vw));
   }
 }
-
-

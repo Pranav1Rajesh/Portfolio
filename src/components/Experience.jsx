@@ -93,7 +93,7 @@ const Experience = () => {
                 
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                   {exp.tags.map(tag => (
-                    <span key={tag} style={{ fontSize: '0.7rem', padding: '4px 10px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                    <span key={tag} style={{ fontSize: '0.7rem', padding: '4px 10px', background: 'var(--chip-bg)', borderRadius: '4px', border: '1px solid var(--chip-border)', color: 'var(--text-main)' }}>
                       {tag}
                     </span>
                   ))}

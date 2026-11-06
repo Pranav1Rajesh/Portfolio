@@ -100,19 +100,19 @@ const Hero = () => {
           position: absolute;
           inset: -8px;
           border-radius: 28px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          background: rgba(15, 23, 42, 0.25);
+          border: 1px solid var(--glass-border);
+          background: var(--photo-rim-bg);
           backdrop-filter: blur(12px);
           z-index: 1;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
         .photo-card-wrapper:hover .photo-glass-rim {
           inset: -12px;
-          border-color: rgba(59, 130, 246, 0.3);
-          background: rgba(15, 23, 42, 0.35);
-          box-shadow: 0 16px 45px rgba(59, 130, 246, 0.2);
+          border-color: rgba(59, 130, 246, 0.4);
+          background: var(--photo-rim-bg);
+          box-shadow: 0 16px 45px var(--primary-glow);
         }
 
         /* Rotating Conic Border Beam Container */
@@ -161,7 +161,7 @@ const Hero = () => {
           height: 100%;
           border-radius: 20px;
           overflow: hidden;
-          background: #070b16;
+          background: var(--photo-inner-bg);
           z-index: 1;
         }
 
